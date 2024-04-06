@@ -26,6 +26,9 @@ function App() {
   }, []);
 
   const handleData = () => {
+    if (!newActivityName.trim()) {
+      return; // ถ้าค่า newActivityName เป็นค่าว่างหรือมีเพียงช่องว่างเท่านั้น ไม่ต้องทำอะไรเพิ่ม
+    }
     const newData = [
       ...data,
       {
